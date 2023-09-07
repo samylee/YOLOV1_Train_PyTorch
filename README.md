@@ -1,0 +1,2 @@
+# YOLOV1_PyTorch_Train
+PyTorch完美复现YOLOV1的精度和速度，配置完全相同，两者模型可以无障碍相互转换。

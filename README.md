@@ -9,9 +9,7 @@ PyTorch完美复现YOLOV1的精度和速度，配置完全相同，两者模型�
 |**yolov1-tiny(ours)** | 0712 |	2007_test |	**52.1** |	**155** |
 
 ## 效果展示
-![](assets/result1.jpg)  
-![](assets/result2.jpg)  
-![](assets/result3.jpg)  
+<img src="assets/result1.jpg" width="400"/>   <img src="assets/result2.jpg" width="400"/>   <img src="assets/result3.jpg" width="400"/>  
 
 ## 使用说明
 comming soon ...

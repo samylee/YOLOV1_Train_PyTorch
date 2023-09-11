@@ -63,7 +63,7 @@ python voc_eval.py
 - `ours`采用`adam`优化器，而`darknet`采用`sgd`
 - 完全复现`darknet`的数据增强方式：`crop`(并非传统意义的数据裁剪)
 - 完全复现`darknet`的`loss`计算方式
-  <br>1. 有目标的两个预测`bbox`，`iou`最大或**`rmse`最小**的用于正样本反馈，反之用于负样本反馈
+  <br>1. 有目标的两个预测`bbox`，`iou`最大或 **`rmse`最小** 的用于正样本反馈，反之用于负样本反馈
   <br>2. 计算两边框`iou`时，需要将预测边框的`宽`和`高`分别平方，用以对应样本边框
   <br>**3. `darknet`采用的`coord_scale`和`noobject_scale`并非论文所说的`5`和`0.5`，而是`5x5`和`0.5x0.5`**
 

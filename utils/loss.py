@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-class YOLOV1Loss(nn.MSELoss):
+class YOLOV1Loss(nn.Module):
     def __init__(self, S=7, B=2, C=20, coord_scale=5, noobject_scale=0.5, device=torch.device('cuda:0')):
         super(YOLOV1Loss, self).__init__()
         self.S, self.B, self.C = S, B, C

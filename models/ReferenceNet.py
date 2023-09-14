@@ -3,7 +3,7 @@ import torch.nn as nn
 
 
 class ReferenceNet(nn.Module):
-    def __init__(self, in_channels=3, out_channels=1024, init_weights=True):
+    def __init__(self, in_channels=3, out_channels=1024):
         super(ReferenceNet, self).__init__()
         self.features = self.make_layers(in_channels=in_channels, out_channels=out_channels)
 

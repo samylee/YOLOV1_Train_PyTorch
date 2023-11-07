@@ -1,5 +1,5 @@
 # YOLOV1_PyTorch_Train
-PyTorch完美复现YOLOV1的精度和速度，配置完全相同，两者模型可以无障碍相互转换。
+900行代码完美复现YOLOV1-tiny的训练和测试，精度，速度，以及配置完全相同，两者模型可以无障碍相互转换。
 
 ## 指标展示
 |Model| train | test | mAP | FPS |

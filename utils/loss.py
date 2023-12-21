@@ -73,9 +73,9 @@ class YOLOV1Loss(nn.Module):
         preds_coord_mask = preds_coord[pcoord_mask].view(-1, self.coords)
         targets_coord_mask = targets_coord[tcoord_mask].view(-1, self.coords)
 
-        best_index_mask = torch.empty((preds_coord_mask.size(0), 1), dtype=torch.bool).to(self.device).fill_(False)
-        worst_index_mask = torch.empty((preds_coord_mask.size(0), 1), dtype=torch.bool).to(self.device).fill_(True)
-        best_iou_mask = torch.empty((targets_coord_mask.size(0), 1), dtype=torch.float32).to(self.device)
+        best_index_mask = torch.empty((preds_coord_mask.size(0), 1), dtype=torch.bool, requires_grad=False).to(self.device).fill_(False)
+        worst_index_mask = torch.empty((preds_coord_mask.size(0), 1), dtype=torch.bool, requires_grad=False).to(self.device).fill_(True)
+        best_iou_mask = torch.empty((targets_coord_mask.size(0), 1), dtype=torch.float32, requires_grad=False).to(self.device)
 
         for i, j in zip(range(0, preds_coord_mask.size(0), self.B), range(targets_coord_mask.size(0))):
             bbox_pred = preds_coord_mask[i:i+self.B]
@@ -88,7 +88,7 @@ class YOLOV1Loss(nn.Module):
             target_xyxy[:, :2] = bbox_target[:, :2] / float(self.S) - 0.5 * bbox_target[:, 2:4]
             target_xyxy[:, 2:4] = bbox_target[:, :2] / float(self.S) + 0.5 * bbox_target[:, 2:4]
 
-            iou = self.box_iou(pred_xyxy, target_xyxy)
+            iou = self.box_iou(pred_xyxy.detach(), target_xyxy)
             max_iou, max_index = iou.max(0)
             if max_iou == 0:
                 rmse = self.box_rmse(pred_xyxy, target_xyxy)

@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     batch_size = 64
     S, B, C = 7, 2, 20
-    coord_scale, noobject_scale = 5*5, 0.5*0.5
+    coord_scale, noobject_scale = 5, 0.5
     pretrain = 'pretrain/reference.weights'
 
     train_label_list = 'data/voc0712/train.txt'

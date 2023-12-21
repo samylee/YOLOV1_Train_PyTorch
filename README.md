@@ -5,8 +5,7 @@
 |Model| train | test | mAP | FPS |
 |-----|------|------|-----|-----|
 |yolov1-tiny(paper) | 0712 |	2007_test |	52.7 |	155 |
-|yolov1-tiny(retrain from darknet) | 0712 |	2007_test |	51.2 |	155 |
-|**yolov1-tiny(ours)** | 0712 |	2007_test |	**52.1** |	**155** |
+|**yolov1-tiny(ours)** | 0712 |	2007_test |	**54.3** |	**155** |
 
 ## 效果展示
 <img src="assets/result1.jpg" width="400" height="260"/>   <img src="assets/result2.jpg" width="400" height="260"/>   

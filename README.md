@@ -40,7 +40,7 @@ wget https://pjreddie.com/media/files/darknet.weights
 ```shell script
 python train.py
 ```
-已训练好的模型：[百度云(提取码:8888)](https://pan.baidu.com/s/1xDWUi5Vwiwnf3VMFjpla_g)
+已训练好的模型：[百度云(提取码:8888)](https://pan.baidu.com/s/1qglnWkbfVP2kgFsKe0jWcg)
 ```shell script
 python detect.py
 ```
